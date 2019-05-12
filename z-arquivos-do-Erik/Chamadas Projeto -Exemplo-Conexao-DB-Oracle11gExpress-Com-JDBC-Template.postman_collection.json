@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "e336c113-6801-48bb-9f90-b9819c38b1fd",
+		"name": "Chamadas Projeto -Exemplo-Conexao-DB-Oracle11gExpress-Com-JDBC-Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Endpoint - /pegarTodosUsuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"login\":\"Erik\",\r\n\t\"senha\":\"123456\",\r\n\t\"ativo\":0\r\n\t}"
+				},
+				"url": {
+					"raw": "http://localhost:8034/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8034",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Exemplo Erik",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"login\":\"Erik\",\r\n\t\"senha\":\"123456\",\r\n\t\"ativo\":0\r\n\t}"
+						},
+						"url": {
+							"raw": "http://localhost:8034/api/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8034",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 May 2019 04:15:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"codigo\": 1,\n    \"mensagem\": \"Registro cadastrado com sucesso!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Endpoint - /adicionarNovoUsuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Erik\",\n\t\"salary\": 200\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8034/usuario/adicionarNovoUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8034",
+					"path": [
+						"usuario",
+						"adicionarNovoUsuario"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Exemplo De Chamada do Erik",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Erik\",\n\t\"salary\": 200\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8034/usuario/adicionarNovoUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8034",
+							"path": [
+								"usuario",
+								"adicionarNovoUsuario"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 May 2019 02:08:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"name\": \"ff\",\n    \"salary\": 200\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "342f9c12-144c-441c-8e0e-b2212b8d56b0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fdfca558-bbf9-4ec5-ad23-5f49aa6b463d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
